@@ -1,0 +1,2 @@
+com/kodilla/testing/collections/CollectionTestSuite.java
+ com.kodilla.testing.collections.CollectionTestSuite
