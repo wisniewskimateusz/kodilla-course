@@ -1,4 +1,20 @@
+com/kodilla/testing/shape/Shape.java
+ com.kodilla.testing.shape.Shape
+com/kodilla/testing/forum/ForumComment.java
+ com.kodilla.testing.forum.ForumComment
+com/kodilla/testing/shape/ShapeCollector.java
+ com.kodilla.testing.shape.ShapeCollector
+com/kodilla/testing/shape/Circle.java
+ com.kodilla.testing.shape.Circle
+com/kodilla/testing/forum/ForumUser.java
+ com.kodilla.testing.forum.ForumUser
+com/kodilla/testing/forum/ForumPost.java
+ com.kodilla.testing.forum.ForumPost
 com/kodilla/testing/collections/OddNumbersExterminator.java
  com.kodilla.testing.collections.OddNumbersExterminator
+com/kodilla/testing/shape/Triangle.java
+ com.kodilla.testing.shape.Triangle
+com/kodilla/testing/shape/Square.java
+ com.kodilla.testing.shape.Square
 com/kodilla/testing/TestingMain.java
  com.kodilla.testing.TestingMain
