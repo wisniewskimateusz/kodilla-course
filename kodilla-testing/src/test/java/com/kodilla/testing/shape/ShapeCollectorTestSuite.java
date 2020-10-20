@@ -1,6 +1,5 @@
-package com.kodilla.testing.collections.shape;
+package com.kodilla.testing.shape;
 
-import com.kodilla.testing.shape.*;
 import org.junit.jupiter.api.*;
 
 import java.util.Arrays;

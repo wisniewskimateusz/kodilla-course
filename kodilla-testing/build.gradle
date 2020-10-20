@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.3.3'
 }
