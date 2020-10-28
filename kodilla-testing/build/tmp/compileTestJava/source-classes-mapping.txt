@@ -1,15 +1,19 @@
-com/kodilla/testing/wather/stub/TemperaturesStub.java
- com.kodilla.testing.wather.stub.TemperaturesStub
 com/kodilla/testing/shape/ShapeCollectorTestSuite.java
  com.kodilla.testing.shape.ShapeCollectorTestSuite
  com.kodilla.testing.shape.ShapeCollectorTestSuite$TestShapeCollector
-com/kodilla/testing/collections/CollectionTestSuite.java
- com.kodilla.testing.collections.CollectionTestSuite
 com/kodilla/testing/forum/tdd/ForumTestSuite.java
  com.kodilla.testing.forum.tdd.ForumTestSuite
  com.kodilla.testing.forum.tdd.ForumTestSuite$TestComments
  com.kodilla.testing.forum.tdd.ForumTestSuite$TestPosts
+com/kodilla/testing/collections/CollectionTestSuite.java
+ com.kodilla.testing.collections.CollectionTestSuite
+com/kodilla/testing/wather/stub/TemperaturesStub.java
+ com.kodilla.testing.wather.stub.TemperaturesStub
 com/kodilla/testing/wather/stub/WeatherForecastTestSuite.java
  com.kodilla.testing.wather.stub.WeatherForecastTestSuite
 com/kodilla/testing/wather/mock/WeatherForecastTestSuite.java
  com.kodilla.testing.wather.mock.WeatherForecastTestSuite
+com/kodilla/testing/library/BookDirectoryTestSuite.java
+ com.kodilla.testing.library.BookDirectoryTestSuite
+ com.kodilla.testing.library.BookDirectoryTestSuite$TestBooksConditions
+ com.kodilla.testing.library.BookDirectoryTestSuite$TestBooksHandsOf

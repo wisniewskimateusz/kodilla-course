@@ -37,12 +37,12 @@ public class WeatherForecast {
         }
         Collections.sort(temperatureList);
 
-        double middleNumOne = temperatureList.get(temperatureList.size() / 2);
-        double middleNumTwo = temperatureList.get((temperatureList.size() / 2 ) - 1);
-
-        if (temperatureList.size() % 2 == 0)
+        if (temperatureList.size() % 2 == 0) {
+            double middleNumOne = temperatureList.get(temperatureList.size() / 2);
+            double middleNumTwo = temperatureList.get((temperatureList.size() / 2) - 1);
             return (middleNumOne + middleNumTwo) / 2;
-        else
-            return temperatureList.get(temperatureList.size() / 2);
+        }
+
+        return temperatureList.get(temperatureList.size() / 2);
     }
 }
