@@ -9,11 +9,28 @@ public class ForumStatistics {
     private int averageCommentsPerUser;
     private int averageCommentsPerPosts;
 
-    public void calculateAdvStatistics(Statistics statistics) {
-        
+    private Statistics statistics;
+
+    public ForumStatistics(Statistics statistics) {
+        this.statistics = statistics;
     }
 
-    public void showStatistics() {
+    public void calculateAdvStatistics(Statistics statistics) {
+        this.usersQuantity = statistics.usersNames().size();
+        this.postsQuantity = statistics.postsCount();
+        this.commentsQuantity = statistics.commentsCount();
 
+        this.averageCommentsPerUser = commentsQuantity / usersQuantity;
+        this.averagePostsPerUser = postsQuantity / usersQuantity;
+        this.averageCommentsPerPosts = commentsQuantity / postsQuantity;
+    }
+
+    public String showStatistics() {
+        return "User quantity = " + usersQuantity
+                + "\nPosts quantity = " + postsQuantity
+                + "\nComments quantity = " + commentsQuantity
+                + "\nAverage posts per user = " + averagePostsPerUser
+                + "\nAverage comments per user = " + averageCommentsPerUser
+                + "\nAverage comments per posts = " + averageCommentsPerPosts;
     }
 }

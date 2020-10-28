@@ -17,3 +17,5 @@ com/kodilla/testing/library/BookDirectoryTestSuite.java
  com.kodilla.testing.library.BookDirectoryTestSuite
  com.kodilla.testing.library.BookDirectoryTestSuite$TestBooksConditions
  com.kodilla.testing.library.BookDirectoryTestSuite$TestBooksHandsOf
+com/kodilla/testing/forum/statistics/ForumStatisticsTestSuite.java
+ com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite
