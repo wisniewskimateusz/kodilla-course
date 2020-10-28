@@ -1,6 +1,5 @@
 package com.kodilla.testing.forum.statistics;
 
-import com.kodilla.testing.library.Book;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;

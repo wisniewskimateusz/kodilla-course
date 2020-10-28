@@ -18,7 +18,13 @@ com/kodilla/stream/beautifier/PoemBeautifier.java
  com.kodilla.stream.beautifier.PoemBeautifier
 com/kodilla/stream/iterate/NumbersGenerator.java
  com.kodilla.stream.iterate.NumbersGenerator
-com/kodilla/stream/StreamMain.java
- com.kodilla.stream.StreamMain
 com/kodilla/stream/immutable/ForumUser.java
  com.kodilla.stream.immutable.ForumUser
+com/kodilla/stream/person/People.java
+ com.kodilla.stream.person.People
+com/kodilla/stream/book/Book.java
+ com.kodilla.stream.book.Book
+com/kodilla/stream/book/BookDirectory.java
+ com.kodilla.stream.book.BookDirectory
+com/kodilla/stream/StreamMain.java
+ com.kodilla.stream.StreamMain
