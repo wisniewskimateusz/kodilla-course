@@ -2,9 +2,9 @@ package com.kodilla.stream.beautifier;
 
 public class PoemBeautifier {
 
-    String textAfterBeauty;
+    static String textAfterBeauty;
 
-    public String beautify(String textToBeauty, PoemDecorator decorator) {
+    public static String beautify(String textToBeauty, PoemDecorator decorator) {
         textAfterBeauty = decorator.decorate(textToBeauty);
         return textToBeauty;
     }

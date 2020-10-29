@@ -1,5 +1,6 @@
 package com.kodilla.stream;
 
+import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
@@ -21,5 +22,17 @@ public class StreamMain {
         theResultMapOfForum.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
+        //Zadanie: upiększacz tekstów
+        PoemBeautifier poemBeautifier = new PoemBeautifier();
+        poemBeautifier.beautify("abc", text -> "ABC" + text + "ABC");
+        poemBeautifier.print();
+        poemBeautifier.beautify("abc", String::toUpperCase);
+        poemBeautifier.print();
+        poemBeautifier.beautify("abc", s -> "++" + s);
+        poemBeautifier.print();
+        poemBeautifier.beautify("abc", String::toLowerCase);
+        poemBeautifier.print();
     }
 }
