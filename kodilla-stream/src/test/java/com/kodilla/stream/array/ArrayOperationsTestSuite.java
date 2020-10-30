@@ -13,6 +13,6 @@ public class ArrayOperationsTestSuite {
         //When
         double resultOfAverage = ArrayOperations.getAverage(numbers);
         //Then
-        assertEquals(4.0, resultOfAverage, 0.1);
+        assertEquals(4.0, resultOfAverage, 0);
     }
 }

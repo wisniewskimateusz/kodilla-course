@@ -27,9 +27,9 @@ public class StreamMain {
 
         //Zadanie: upiększacz tekstów
         PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("abc", text -> "ABC" + text + "ABC");
-        poemBeautifier.beautify("abc", String::toUpperCase);
-        poemBeautifier.beautify("abc", s -> "++" + s);
-        poemBeautifier.beautify("abc", String::toLowerCase);
+
+        System.out.println(poemBeautifier.beautify("abc", text -> "ABC" + text + "ABC"));
+        System.out.println(poemBeautifier.beautify("abc", String::toUpperCase));
+        System.out.println(poemBeautifier.beautify("abc", s -> "++" + s));
     }
 }

@@ -44,9 +44,19 @@ public class ForumStatistics {
         this.postsQuantity = statistics.postsCount();
         this.commentsQuantity = statistics.commentsCount();
 
-        this.averageCommentsPerUser = (double) usersQuantity / commentsQuantity;
-        this.averagePostsPerUser = (double) usersQuantity / postsQuantity;
-        this.averageCommentsPerPosts = (double) postsQuantity / commentsQuantity;
+        if (usersQuantity != 0) {
+            this.averageCommentsPerUser = (double) commentsQuantity / usersQuantity;
+            this.averagePostsPerUser = (double) postsQuantity / usersQuantity;
+        } else {
+            this.averageCommentsPerUser = 0;
+            this.averagePostsPerUser = 0;
+        }
+
+        if (postsQuantity != 0) {
+            this.averageCommentsPerPosts = (double) commentsQuantity / postsQuantity;
+        } else {
+            this.averageCommentsPerPosts = 0;
+        }
     }
 
     public String showStatistics() {
