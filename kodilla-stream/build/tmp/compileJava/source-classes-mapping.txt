@@ -30,8 +30,8 @@ com/kodilla/stream/lambda/Executor.java
  com.kodilla.stream.lambda.Executor
 com/kodilla/stream/book/Book.java
  com.kodilla.stream.book.Book
-com/kodilla/stream/world/Country.java
- com.kodilla.stream.world.Country
+com/kodilla/stream/portfolio/Board.java
+ com.kodilla.stream.portfolio.Board
 com/kodilla/stream/forum/ForumUser.java
  com.kodilla.stream.forum.ForumUser
 com/kodilla/stream/invoice/simple/SimpleItem.java
@@ -54,13 +54,13 @@ com/kodilla/stream/portfolio/Task.java
  com.kodilla.stream.portfolio.Task
 com/kodilla/stream/array/ArrayOperations.java
  com.kodilla.stream.array.ArrayOperations
-com/kodilla/stream/portfolio/Board.java
- com.kodilla.stream.portfolio.Board
-com/kodilla/stream/world/Continent.java
- com.kodilla.stream.world.Continent
-com/kodilla/stream/world/World.java
- com.kodilla.stream.world.World
 com/kodilla/stream/StreamMain.java
  com.kodilla.stream.StreamMain
+com/kodilla/stream/world/Continent.java
+ com.kodilla.stream.world.Continent
 com/kodilla/stream/beautifier/PoemBeautifier.java
  com.kodilla.stream.beautifier.PoemBeautifier
+com/kodilla/stream/world/Country.java
+ com.kodilla.stream.world.Country
+com/kodilla/stream/world/World.java
+ com.kodilla.stream.world.World

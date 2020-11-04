@@ -1,6 +1,5 @@
 package com.kodilla.stream.world;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Continent {
@@ -8,9 +7,9 @@ public class Continent {
     private String name;
     private List<Country> countries;
 
-    public Continent(String name) {
+    public Continent(String name, List<Country> countries) {
         this.name = name;
-        this.countries = new ArrayList<>();
+        this.countries = countries;
     }
 
     public String getName() {
@@ -19,5 +18,13 @@ public class Continent {
 
     public List<Country> getCountries() {
         return countries;
+    }
+
+    @Override
+    public String toString() {
+        return "Continent{" +
+                "name='" + name + '\'' +
+                ", countries=" + countries +
+                '}';
     }
 }

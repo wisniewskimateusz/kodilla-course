@@ -20,15 +20,11 @@ public class Country {
         return peopleQuantity;
     }
 
-    //chine 1306313813
-    //indie 1102355999
-    //indonesia 246973100
-
-    //poland 38386000
-    //germany 83019200
-    //russia 146877088
-
-    //usa 308878120
-    //canada 33989040
-    //panama 3559408
+    @Override
+    public String toString() {
+        return "Country{" +
+                "name='" + name + '\'' +
+                ", peopleQuantity=" + peopleQuantity +
+                '}';
+    }
 }

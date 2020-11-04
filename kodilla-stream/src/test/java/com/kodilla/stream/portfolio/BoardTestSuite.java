@@ -64,19 +64,20 @@ class BoardTestSuite {
 
     @Test
     void testAddTaskListFindLongTasks() {
-//        //Given
-//        Board project = prepareTestData();
-//
-//        //When
-//        List<TaskList> inProgressTasks = new ArrayList<>();
-//        inProgressTasks.add(new TaskList("In progress"));
-//        double averageTimeTasks = project.getTaskLists().stream()
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+//        //double averageTimeTasks =
+//                project.getTaskLists().stream()
 //                .filter(inProgressTasks::contains)
-//                .flatMap(t1 -> t1.getTasks().stream())
-//                .reduce()
-//
-//        //Then
-//        assertEquals(2, averageTimeTasks);
+//                //.flatMap(t1 -> t1.getTasks().stream())
+//                .reduce(LocalDate.now(), (current) -> LocalDate.now().minus())
+
+        //Then
+        assertEquals(2, 0);
     }
 
     @Test

@@ -5,14 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class World {
+
     private List<Continent> continents = new ArrayList();
+
+    public World(List<Continent> continents) {
+        this.continents = continents;
+    }
 
     public List<Continent> getContinents() {
         return continents;
     }
 
     public BigDecimal getPeopleQuantity() {
-        BigDecimal peopleQuantity = new BigDecimal("");
-        return peopleQuantity;
+        return continents.stream()
+                .flatMap(continent -> continent.getCountries().stream())
+                .map(country -> country.getPeopleQuantity())
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }
