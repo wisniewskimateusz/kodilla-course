@@ -68,24 +68,6 @@ class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        List<TaskList> inProgressTasks = new ArrayList<>();
-        inProgressTasks.add(new TaskList("In progress"));
-//        //double averageTimeTasks =
-//                project.getTaskLists().stream()
-//                .filter(inProgressTasks::contains)
-//                //.flatMap(t1 -> t1.getTasks().stream())
-//                .reduce(LocalDate.now(), (current) -> LocalDate.now().minus())
-
-        //Then
-        assertEquals(2, 0);
-    }
-
-    @Test
-    void testAddTaskListAverageWorkingOnTask() {
-        //Given
-        Board project = prepareTestData();
-
-        //When
         List<TaskList> averageDaysInProgressTasks = new ArrayList<>();
         averageDaysInProgressTasks.add(new TaskList("In progress"));
         long longTasks = project.getTaskLists().stream()
@@ -96,6 +78,24 @@ class BoardTestSuite {
                 .count();
         //Then
         assertEquals(2, longTasks);
+    }
+
+    @Test
+    void testAddTaskListAverageWorkingOnTask() {
+        //Given
+        Board project = prepareTestData();
+        int actualTime = LocalDate.now().getDayOfMonth();
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+//        double averageTimeTasks =
+//                project.getTaskLists().stream()
+//                        .filter(inProgressTasks::contains)
+//                        .flatMap(t1 -> t1.getTasks().stream())
+//                        //.reduce(actualTime, (t, ) -> actualTime)
+
+        //Then
+        assertEquals(2, 0);
     }
 
     private Board prepareTestData() {
