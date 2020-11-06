@@ -9,19 +9,20 @@ public class FlightFinder {
 
     public FlightFinder() {
         airports = new HashMap<>();
-        //uzupelnic
+        airports.put("Warsaw", true);
+        airports.put("Moscow", false);
+        airports.put("Berlin", true);
+        airports.put("London", false);
+        airports.put("New York", true);
     }
 
     public boolean findFlight(Flight flight) throws RouteNotFoundException {
-        Map<String, Boolean> airportNames = new HashMap<>();
-
-        for (Map.Entry<String, Boolean> entry :airportNames.entrySet()) {
-            if (entry.getKey().equals(flight.getArrivalAirport()) || entry.getKey().equals(flight.getDepartureAirport())) {
-                System.out.println(entry.getKey());
-            } else {
-                throw new RouteNotFoundException("Airport does not exist.");
+        for (Map.Entry<String, Boolean> entry : airports.entrySet()) {
+            boolean isAirportExist = entry.getKey().equals(flight.getDepartureAirport());
+            if (isAirportExist) {
+                return true;
             }
         }
-        return false;
+         throw new RouteNotFoundException("Airport does not exist.");
     }
 }

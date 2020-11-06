@@ -9,10 +9,13 @@ public class FlightFinderRunner {
         Flight flight4 = new Flight("London", "Berlin");
 
         FlightFinder flightFinder = new FlightFinder();
+
         try {
             flightFinder.findFlight(flight1);
         } catch (RouteNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            System.out.println("End");
         }
     }
 }

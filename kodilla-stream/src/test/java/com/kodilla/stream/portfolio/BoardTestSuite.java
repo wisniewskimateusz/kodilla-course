@@ -1,14 +1,11 @@
 package com.kodilla.stream.portfolio;
 
-import com.kodilla.stream.book.Book;
-import com.kodilla.stream.book.BookDirectory;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.temporal.ChronoUnit;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
