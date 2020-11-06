@@ -7,9 +7,9 @@ public class ExceptionHandling {
         try {
             secondChallenge.probablyIWillThrowException(2, 1.5);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         } finally {
-
+            System.out.println("End.");
         }
     }
 }

@@ -5,7 +5,14 @@ import java.util.Map;
 
 public class FlightFinder {
 
-    public void findFlight(Flight flight) throws RouteNotFoundException {
+    public Map<String, Boolean> airports;
+
+    public FlightFinder() {
+        airports = new HashMap<>();
+        //uzupelnic
+    }
+
+    public boolean findFlight(Flight flight) throws RouteNotFoundException {
         Map<String, Boolean> airportNames = new HashMap<>();
 
         for (Map.Entry<String, Boolean> entry :airportNames.entrySet()) {
@@ -15,7 +22,6 @@ public class FlightFinder {
                 throw new RouteNotFoundException("Airport does not exist.");
             }
         }
-
-
+        return false;
     }
 }

@@ -4,6 +4,7 @@ import com.kodilla.stream.book.Book;
 import com.kodilla.stream.book.BookDirectory;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,18 +85,18 @@ class BoardTestSuite {
     void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
-        int actualTime = LocalDate.now().getDayOfMonth();
         //When
+
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-//        double averageTimeTasks =
-//                project.getTaskLists().stream()
-//                        .filter(inProgressTasks::contains)
-//                        .flatMap(t1 -> t1.getTasks().stream())
-//                        //.reduce(actualTime, (t, ) -> actualTime)
-
+        double averageDays = project.getTaskLists().stream()
+                        .filter(inProgressTasks::contains)
+                        .flatMap(t1 -> t1.getTasks().stream())
+                        .mapToInt(task -> Period.between(task.getCreated(), LocalDate.now()).getDays())
+                        .average()
+                        .orElse(0);
         //Then
-        assertEquals(2, 0);
+        assertEquals(10, averageDays);
     }
 
     private Board prepareTestData() {

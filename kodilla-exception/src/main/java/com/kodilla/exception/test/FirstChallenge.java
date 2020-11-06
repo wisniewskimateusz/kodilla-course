@@ -15,13 +15,15 @@ public class FirstChallenge {
      */
     public static void main(String[] args) {
 
-        FirstChallenge firstChallenge = new FirstChallenge();
-        double result = 0;
+        FirstChallenge firstChallenge = null;
+
         try {
-             result = firstChallenge.divide(3, 0);
+            double result = firstChallenge.divide(3, 0);
+            System.out.println(result);
         } catch (ArithmeticException e) {
-            System.out.println("Can't devide by 0");
+            System.out.println("Can't divide by 0");
+        } finally {
+            System.out.println("End.");
         }
-        System.out.println(result);
     }
 }
