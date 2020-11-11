@@ -13,16 +13,19 @@ public class FlightFinder {
         airports.put("Moscow", false);
         airports.put("Berlin", true);
         airports.put("London", false);
-        airports.put("New York", true);
+        airports.put("New York", false);
     }
 
     public boolean findFlight(Flight flight) throws RouteNotFoundException {
         for (Map.Entry<String, Boolean> entry : airports.entrySet()) {
-            boolean isAirportExist = entry.getKey().equals(flight.getDepartureAirport());
+            boolean isAirportExist = entry.getKey().equals(flight.getArrivalAirport());
             if (isAirportExist) {
-                return true;
+                if (entry.getValue().equals(true)) {
+                    return true;
+                }
+                return false;
             }
         }
-         throw new RouteNotFoundException("Airport does not exist.");
+        throw new RouteNotFoundException("Airport does not exist.");
     }
 }

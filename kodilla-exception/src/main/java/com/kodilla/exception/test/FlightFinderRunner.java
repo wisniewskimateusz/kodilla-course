@@ -3,15 +3,18 @@ package com.kodilla.exception.test;
 public class FlightFinderRunner {
     public static void main(String[] args) {
 
-        Flight flight1 = new Flight("Warsaw", "Berlin");
-        Flight flight2 = new Flight("Moscow", "New York");
-        Flight flight3 = new Flight("Madrid", "Warsaw");
-        Flight flight4 = new Flight("London", "Berlin");
+        Flight flight1 = new Flight("Warsaw", "Berlin");    //istnieje, true
+        Flight flight2 = new Flight("Moscow", "New York");  //istnieje, false
+        Flight flight3 = new Flight("Madrid", "Warsaw");    //istnieje, true
+        Flight flight4 = new Flight("London", "Madrid");   //nie istnieje
+        Flight flight5 = new Flight("Warsaw", "Radom");   //nie istnieje
 
         FlightFinder flightFinder = new FlightFinder();
 
+        System.out.println(flightFinder.airports);
+
         try {
-            flightFinder.findFlight(flight1);
+            System.out.println(flightFinder.findFlight(flight1));
         } catch (RouteNotFoundException e) {
             e.printStackTrace();
         } finally {
