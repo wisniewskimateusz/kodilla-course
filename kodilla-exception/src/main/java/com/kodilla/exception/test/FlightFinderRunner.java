@@ -14,7 +14,7 @@ public class FlightFinderRunner {
         System.out.println(flightFinder.airports);
 
         try {
-            System.out.println(flightFinder.findFlight(flight1));
+            System.out.println(flightFinder.findFlight(flight4));
         } catch (RouteNotFoundException e) {
             e.printStackTrace();
         } finally {

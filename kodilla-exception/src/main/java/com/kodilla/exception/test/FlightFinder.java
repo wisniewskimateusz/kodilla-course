@@ -20,10 +20,7 @@ public class FlightFinder {
         for (Map.Entry<String, Boolean> entry : airports.entrySet()) {
             boolean isAirportExist = entry.getKey().equals(flight.getArrivalAirport());
             if (isAirportExist) {
-                if (entry.getValue().equals(true)) {
-                    return true;
-                }
-                return false;
+                return entry.getValue();
             }
         }
         throw new RouteNotFoundException("Airport does not exist.");
