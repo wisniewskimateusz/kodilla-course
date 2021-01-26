@@ -17,10 +17,18 @@ public class FlyProcessor {
     }
 
     public void find(Airport airport) {
-        List<Flight> findFlightsList = searchService.find(airport);
+        List<Flight> findArrivalFlightsList = searchService.findArrivalAirport(airport);
+        List<Flight> findDeparturesFlightsList = searchService.findDepartureAirport(airport);
+        List<Flight> findIntermediateFlightsList = searchService.findIntermediateAirport(airport);
 
-        if (findFlightsList != null) {
-            findFlightsList.forEach(System.out::println);
+        if (findArrivalFlightsList != null) {
+            findArrivalFlightsList.forEach(System.out::println);
+        }
+        if (findDeparturesFlightsList != null) {
+            findDeparturesFlightsList.forEach(System.out::println);
+        }
+        if (findIntermediateFlightsList != null) {
+            findIntermediateFlightsList.forEach(System.out::println);
         }
     }
 }

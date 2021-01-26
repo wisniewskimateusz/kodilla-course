@@ -16,11 +16,23 @@ public class FlightFinder implements SearchService {
     }
 
     @Override
-    public List<Flight> find(Airport airport) {
+    public List<Flight> findArrivalAirport(Airport airport) {
         return flyGenerator.getFlightList().stream()
-                .filter(x -> x.getDepartureAirport().equals(airport)
-                        || x.getArrivalAirport().equals(airport)
-                        || x.getIntermediateAirport().equals(airport))
+                .filter(x -> x.getArrivalAirport().equals(airport))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Flight> findDepartureAirport(Airport airport) {
+        return flyGenerator.getFlightList().stream()
+                .filter(x -> x.getDepartureAirport().equals(airport))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Flight> findIntermediateAirport(Airport airport) {
+        return flyGenerator.getFlightList().stream()
+                .filter(x -> x.getIntermediateAirport().equals(airport))
                 .collect(Collectors.toList());
     }
 }

@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface SearchService {
 
-    List<Flight> find(Airport airport);
+    List<Flight> findArrivalAirport(Airport airport);
+    List<Flight> findDepartureAirport(Airport airport);
+    List<Flight> findIntermediateAirport(Airport airport);
 }
