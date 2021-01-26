@@ -2,6 +2,10 @@ package com.kodilla.good.patterns.airport.service;
 
 import com.kodilla.good.patterns.airport.FlyGenerator;
 import com.kodilla.good.patterns.airport.model.Airport;
+import com.kodilla.good.patterns.airport.model.Flight;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class FlightFinder implements SearchService {
 
@@ -12,20 +16,11 @@ public class FlightFinder implements SearchService {
     }
 
     @Override
-    public boolean findFrom(Airport flightFrom) {
+    public List<Flight> find(Airport airport) {
         return flyGenerator.getFlightList().stream()
-                .anyMatch(x -> x.getDepartureAirport().equals(flightFrom));
-    }
-
-    @Override
-    public boolean findTo(Airport flightTo) {
-        return flyGenerator.getFlightList().stream()
-                .anyMatch(x -> x.getArrivalAirport().equals(flightTo));
-    }
-
-    @Override
-    public boolean findIndirect(Airport indirect) {
-        return flyGenerator.getFlightList().stream()
-                .anyMatch(x -> x.getIntermediateAirport().equals(indirect));
+                .filter(x -> x.getDepartureAirport().equals(airport)
+                        || x.getArrivalAirport().equals(airport)
+                        || x.getIntermediateAirport().equals(airport))
+                .collect(Collectors.toList());
     }
 }

@@ -11,14 +11,9 @@ public class ExtraFoodShop implements ProducerService {
 
     @Override
     public boolean process(Product product) {
-        for (int i = 0; i < extraFoodProductsList.size(); i++) {
-            if (getExtraFoodProductList().get(i).getProductName().equals(product.getProductName())) {
-                if (getExtraFoodProductList().get(i).getQuantity() >= product.getQuantity()) {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return extraFoodProductsList.stream()
+                .anyMatch(p -> p.getProductName()
+                        .equals(product.getProductName()) && p.getQuantity() >= product.getQuantity());
     }
 
     public List<Product> getExtraFoodProductList() {

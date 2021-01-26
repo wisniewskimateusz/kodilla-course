@@ -19,7 +19,6 @@ public class OrderProcessor {
         } else {
             System.out.println("Produkt nie istnieje lub jego ilość jest mała.");
         }
-        //return producerService.process(order.getProduct());
         return false;
     }
 

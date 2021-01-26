@@ -11,14 +11,9 @@ public class GlutenFreeShop implements ProducerService {
 
     @Override
     public boolean process(Product product) {
-        for (int i = 0; i < glutenFreeProductsList.size(); i++) {
-            if (getGlutenFreeProductList().get(i).getProductName().equals(product.getProductName())) {
-                if (getGlutenFreeProductList().get(i).getQuantity() >= product.getQuantity()) {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return glutenFreeProductsList.stream()
+                .anyMatch(p -> p.getProductName()
+                        .equals(product.getProductName()) && p.getQuantity() >= product.getQuantity());
     }
 
     public List<Product> getGlutenFreeProductList() {

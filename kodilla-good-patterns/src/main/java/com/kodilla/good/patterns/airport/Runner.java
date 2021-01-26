@@ -9,12 +9,14 @@ public class Runner {
         FlyGenerator flyGenerator = new FlyGenerator();
         FlightFinder flightFinder = new FlightFinder(flyGenerator);
 
-        Airport airport = new Airport("GDANSK");
-
+        Airport airport = new Airport("WARSZAWA");
         FlyProcessor processor = new FlyProcessor(flightFinder, airport);
-        processor.find(airport);
 
-//        System.out.println("-------------");
-//        System.out.println(flyGenerator.getFlightList());
+        System.out.println("----------------------------------------");
+        System.out.println("Wszyskie loty");
+        System.out.println(flyGenerator.getFlightList());
+        System.out.println("----------------------------------------");
+        System.out.println("Znalezione loty");
+        processor.find(airport);
     }
 }

@@ -11,7 +11,7 @@ public class FlyGenerator {
     private List<Flight> flightList;
 
     public FlyGenerator() {
-        flightList = new ArrayList<>();         //wylot -> przylot -> posrednie
+        flightList = new ArrayList<>();
         Flight flight1 = new Flight(new Airport("GDANSK"), new Airport("WARSZAWA"), new Airport("BERLIN"));
         Flight flight2 = new Flight(new Airport("KRAKOW"), new Airport("SZCZECIN"), new Airport("BERLIN"));
         Flight flight3 = new Flight(new Airport("MADRID"), new Airport("WARSZAWA"), new Airport("GDANSK"));
