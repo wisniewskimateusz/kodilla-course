@@ -2,13 +2,9 @@ package com.kodilla.patterns.singleton;
 
 public enum Logger {
 
-    INSTANCE("");
+    INSTANCE;
 
-    private String lastLog;
-
-    Logger(String lastLog) {
-        this.lastLog = lastLog;
-    }
+    private String lastLog = "";
 
     public String log(String log) {
         return lastLog = "Log: [" + log + "]";
