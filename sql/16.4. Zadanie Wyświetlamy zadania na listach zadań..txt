@@ -1,0 +1,37 @@
+-- Ad 1.
+
+SELECT I.SUMMARY, S.NAME
+FROM ISSUES I
+JOIN ISSUESLISTS S ON S.ID = I.ISSUESLIST_ID;
+
+-------------------------------------------------------------------------------------------------------------
+-- Ad 2.
+
+SELECT I.SUMMARY, U.FIRSTNAME, U.LASTNAME
+FROM ISSUES I
+JOIN USERS U ON I.USER_ID_ASSIGNEDTO = U.ID;
+
+-------------------------------------------------------------------------------------------------------------
+-- Ad 3.
+
+SELECT U.FIRSTNAME, U.LASTNAME
+FROM USERS U
+JOIN ISSUESLISTS S ON S.ID = U.ID
+JOIN ISSUES ISS ON ISS.ISSUESLIST_ID = S.ID;
+
+SELECT U.FIRSTNAME, U.LASTNAME, COUNT(S.ID) AS TASK_NUMBER
+FROM USERS U
+JOIN ISSUESLISTS S ON S.ID = U.ID
+JOIN ISSUES ISS ON ISS.ISSUESLIST_ID = S.ID
+GROUP BY S.ID;
+
+-------------------------------------------------------------------------------------------------------------
+
+SELECT USERS.FIRSTNAME, USERS.LASTNAME, COUNT(*) 
+                AS POSTS_NUMBER FROM USERS JOIN POSTS ON 
+                USERS.ID = POSTS.USER_ID GROUP BY POSTS.USER_ID  HAVING COUNT(*) >= 2;
+
+SELECT U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_NUMBER
+FROM USERS U JOIN POSTS P ON U.ID = P.USER_ID
+GROUP BY P.USER_ID
+HAVING COUNT(*) > 2;
