@@ -26,6 +26,7 @@ public class TaskQueueTestSuite {
         taskQueue2.addTask("Spring Data");
         taskQueue3.addTask("ORM");
         taskQueue3.addTask("MySql");
+
         // Then
         assertEquals(3, pablo.getUpdateCount());
         assertEquals(2, michael.getUpdateCount());
